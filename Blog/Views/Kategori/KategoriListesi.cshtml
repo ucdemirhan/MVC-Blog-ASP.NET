@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Blog.Models.Kategori>
+
+<!-- Kategori Listesi -->
+<div class="list-group" style="max-width:355px;">
+    <a href="/Home/Index" class="list-group-item list-group-item-action active" aria-current="true">
+        Tüm Kategoriler
+    </a>
+
+    @foreach (var item in Model)
+    {
+        <a href="/Home/MakaleListesi/@item.Id" class="list-group-item list-group-item-action">@item.KategoriAd</a>
+    }
+
+
+</div>
